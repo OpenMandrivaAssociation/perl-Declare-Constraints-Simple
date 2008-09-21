@@ -1,6 +1,8 @@
 %define module   Declare-Constraints-Simple
 %define version    0.03
-%define release    %mkrel 1
+%define release    %mkrel 2
+
+%define _requires_exceptions perl(Declare::Constraints::Simple-Library)
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -16,6 +18,7 @@ BuildRequires: perl(Carp::Clan)
 BuildRequires: perl(Class::Inspector)
 BuildRequires: perl(Scalar::Util)
 BuildRequires: perl(Test::More)
+Requires:      perl-aliased
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 

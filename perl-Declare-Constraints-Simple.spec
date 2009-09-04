@@ -1,6 +1,6 @@
 %define module   Declare-Constraints-Simple
 %define version    0.03
-%define release    %mkrel 2
+%define release    %mkrel 3
 
 %define _requires_exceptions perl(Declare::Constraints::Simple-Library)
 

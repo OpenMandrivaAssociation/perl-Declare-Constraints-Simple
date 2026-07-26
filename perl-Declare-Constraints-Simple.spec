@@ -1,6 +1,4 @@
 %define upstream_name    Declare-Constraints-Simple
-%define upstream_version 0.03
-
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Declare::Constraints::Simple-Library\\)'
 %else
@@ -8,14 +6,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.03
+Release:	6
 
 Summary:	Declarative Validation of Data Structures
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Declare/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Declare/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -34,7 +32,7 @@ profile to validate a data structure. It does this by giving you a set of
 declarative keywords in the importing namespace.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -58,9 +56,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Sun Feb 14 2010 Jérôme Quelin <jquelin@mandriva.org> 0.30.0-1mdv2011.0
 + Revision: 505727
-- rebuild using %%perl_convert_version
-
-* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.03-3mdv2010.0
+- rebuild using %0.03 Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.03-3mdv2010.0
 + Revision: 430407
 - rebuild
 
